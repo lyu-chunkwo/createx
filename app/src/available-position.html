@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Construction | Available Position</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body class="menu-scroll" id="top">
+
+  <header class="header header__page header--vacancy">
+    <div class="container">
+      @include('partials/page-header.html')
+    </div>
+  </header>
+
+  <main class=" main">
+
+    <div class="page-hero page-hero--vacancy">
+      <div class="container">
+        <div class="page-hero__wrap">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__items">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Homepage</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="about.html">About Us</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Available Positions</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="page-hero__text-box">
+            <h1 class="page-hero__title">available positions</h1>
+            <div class="page-hero__text">
+              <p>
+                Build your career with Createx Construction Bureau.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @include('partials/vacancy.html')
+
+    @include('partials/employee-benefits.html')
+
+    @include('partials/modals.html')
+  </main>
+
+  @include('partials/details.html')
+  @include('partials/footer.html')
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

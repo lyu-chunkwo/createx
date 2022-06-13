@@ -1,0 +1,117 @@
+.team {
+  padding: 90px 120px;
+
+  @media (max-width: 1200px) {
+    padding: 0 0 60px;
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: $light-text;
+    margin-bottom: 60px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px 20px;
+  }
+
+  &__item {
+    margin: 0 15px 60px;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      .team__socials {
+        transform: translateY(-70px);
+      }
+    }
+  }
+
+  &__img {
+    width: 285px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  &__socials {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba($accent, 0.7);
+    transition: transform 0.5s;
+    bottom: -70px;
+  }
+
+  &__socials-item {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__text-box {
+    padding-top: 16px;
+  }
+
+  &__employee-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  &__employee-position {
+    color: $light-text;
+  }
+
+  &__vacancy {
+    text-align: center;
+    color: $title;
+    font-size: 18px;
+  }
+
+  &__vacancy-link {
+    color: $accent;
+    text-decoration: underline;
+
+    &:hover {
+      color: $accent;
+      text-decoration: none;
+    }
+  }
+}

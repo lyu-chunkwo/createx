@@ -1,0 +1,101 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "global";
+@import "libs";
+
+// todo Header
+@import "components/headers/header";
+
+// todo Header-pages
+@import "components/headers/page-hero";
+
+// todo hero
+@import "components/index/hero";
+
+// todo video
+@import "components/index/video";
+
+// todo core
+@import "components/index/core";
+
+// todo question
+@import "components/index/question";
+
+// todo services
+@import "components/index/services";
+
+// todo projects
+@import "components/index/projects";
+
+// todo partners
+@import "components/index/partners";
+
+// todo some-facts
+@import "components/index/some-facts";
+
+// todo recent-news
+@import "components/index/recent-news";
+
+// todo details
+@import "components/index/details";
+
+// todo offer
+@import "components/services-page/offer";
+
+// todo offer
+@import "components/interior-page/we-offer";
+
+// todo offer
+@import "components/interior-page/how-work";
+
+// todo offer
+@import "components/interior-page/pricing";
+
+// todo work-offer
+@import "components/work-page/work-offer";
+
+// todo work-slider
+@import "components/work-page/work-slider";
+
+// todo project-goal
+@import "components/work-page/project-goal";
+
+// todo decisions
+@import "components/work-page/decisions";
+
+// todo achivements
+@import "components/about-page/achivements";
+
+// todo our
+@import "components/about-page/our";
+
+// todo our-partners
+@import "components/about-page/our-partners";
+
+// todo team
+@import "components/about-page/team";
+
+// todo map
+@import "components/about-page/map";
+
+// todo vacancy
+@import "components/available-position/vacancy";
+
+// todo subscribe-modal
+@import "components/available-position/subscribe-modal";
+
+// todo news
+@import "components/news/news";
+
+// todo news-single
+@import "components/news/news-single";
+
+// todo contact
+@import "components/contacts/contact";
+
+// todo offices
+@import "components/contacts/offices";
+
+// todo footer
+@import "components/footer";

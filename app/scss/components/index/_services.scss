@@ -1,0 +1,116 @@
+.services {
+  background-image: url(../images/services/services-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 212px 0 80px;
+  position: relative;
+  margin-bottom: 120px;
+
+  @media (max-width: 768px) {
+    padding-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 60px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px 50px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    background-image: url(../images/services/tile-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 285px;
+    height: 285px;
+    margin: 0 15px 30px;
+    position: relative;
+    border-radius: 4px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(#fff, 1);
+      transition: background-color 1s;
+    }
+
+    &:hover {
+      .services__inner {
+        color: #fff;
+      }
+
+      .services__svg {
+        fill: #fff;
+      }
+
+      &::before {
+        background-color: rgba(#fff, 0);
+      }
+    }
+  }
+
+  &__svg {
+    position: relative;
+    z-index: 5;
+    fill: $accent;
+    transition: fill 0.5s;
+    margin-bottom: 24px;
+  }
+
+  &__inner {
+    color: $title;
+    position: relative;
+    z-index: 66;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.9;
+    font-weight: 700;
+    transition: color 0.5s;
+    width: 285px;
+    height: 285px;
+  }
+}

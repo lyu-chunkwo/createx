@@ -1,0 +1,88 @@
+$accent: #ff5a30;
+$bg: #f4f5f7;
+$text: #424551;
+$light-text: #787a80;
+$title: #1e212c;
+$menu-text: #424551;
+$arrows-bg: #acb4b8;
+$input-border: #d7dadd;
+$input-color: #9a9ca5;
+
+// ! Миксин для fancybox(video-popup), предотвращает ошибку gulp
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+// ! Миксин для ограничения строк текста
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+// ! Использование миксина
+// .class {
+//   @include line-clamp(3);
+// }
+
+@mixin input {
+  padding: 13px 16px;
+  border: 1px solid $input-border;
+  background-color: $bg;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $input-color;
+  }
+}
+// ! Использование миксина
+// .class {
+//   @include input;
+// }
+
+// ! Шаблон для скрытия checkbox и radio buttons
+%checkbox-hidden,
+%radio-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+// ! Использование шаблона
+// @extend %checkbox-hidden;
+// @extend %radio-hidden;
+
+// ! Шаблон для Шрифта
+
+%ubuntu-400 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+%ubuntu-700 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+%lato-700 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+%lato-900 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+}
+// ! Использование шаблона
+// @extend %font-name-400;

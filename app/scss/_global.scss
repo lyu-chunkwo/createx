@@ -1,0 +1,401 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  @extend %ubuntu-400;
+  color: $text;
+  font-size: 16px;
+  line-height: 1.62;
+  min-height: 100%;
+  min-width: 320px; //! Предотвращает нижний скролл при анимации
+  overflow-x: hidden; //! Предотвращает нижний скролл при анимации
+  position: relative;
+
+  // ! Выключает скролл при адаптивном меню
+  // ! Класс lock добавляется скриптом
+  @media (max-width: 948px) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: $title;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
+}
+
+.section-subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  color: $light-text;
+}
+
+input,
+textarea {
+  &:active,
+  &:focus {
+    outline: transparent;
+  }
+}
+
+button {
+  &:active,
+  &:focus {
+    outline: transparent;
+    cursor: pointer;
+  }
+}
+
+.button {
+  color: #fff;
+  padding: 0 40px;
+  font-size: 16px;
+  line-height: 3;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;
+
+  &--fill {
+    background-color: $accent;
+    border: 1px solid $accent;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      border-color: #fff;
+      background-color: transparent;
+    }
+  }
+
+  &--stroke {
+    border: 1px solid #fff;
+    transition: background-colot 0.3s, border-color 0.3s;
+
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+      color: #fff;
+    }
+  }
+}
+
+.main-title {
+  font-size: 72px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  max-width: 577px;
+  margin-bottom: 24px;
+
+  span {
+    color: $accent;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 62px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 32px;
+  }
+}
+
+.main-text {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+  max-width: 590px;
+  margin-bottom: 61px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+// ! Скрывает заголовки и т.д. для СЕО
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+input,
+textarea {
+  &:focus {
+    border: 1px solid #9cc0f9;
+  }
+
+  // &:hover {
+  //   border: 1px solid yellow;
+  // }
+
+  // &:active {
+  //   border: 1px solid yellowgreen;
+  // }
+}
+
+// ! Стилизация checkbox
+.checkbox {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 2;
+  text-transform: capitalize;
+  padding-left: 32px;
+
+  &__input {
+    cursor: pointer;
+    @extend %checkbox-hidden;
+
+    &:checked {
+      & + .checkbox__style {
+        &:before {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background-color: #979797;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  &__style {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #979797;
+    position: absolute;
+    margin-left: -64px;
+    margin-top: 2px;
+  }
+}
+// ! html шаблон для checkbox
+// <label class="checkbox">
+//   <input class="checkbox__input" type="checkbox">checkbox
+//   <span class="checkbox__style"></span>
+// </label>
+
+// ! Стилизация radio
+.radio {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 2;
+  text-transform: capitalize;
+  padding-left: 32px;
+
+  &__input {
+    cursor: pointer;
+    @extend %checkbox-hidden;
+
+    &:checked {
+      & + .radio__style {
+        &:before {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background-color: #979797;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__style {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid #979797;
+    position: absolute;
+    margin-left: -64px;
+    margin-top: 2px;
+  }
+}
+// ! html шаблон для radio
+// <label class="radio">
+//   <input class="radio__input" type="radio">radio
+//   <span class="radio__style"></span>
+// </label>
+
+.section-linkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $title;
+    margin-right: 40px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+    }
+  }
+
+  &__btn {
+    transition: color 0.5s, background-color 0.5s;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      color: $accent;
+      border-color: $accent;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.menu-scroll {
+  &.scroll {
+    // ! Класс для кнопки ссылки
+    .gotop {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 40px;
+
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 8px;
+    padding-right: 13px;
+    font-size: 14px;
+    position: relative;
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+
+      &::after {
+        display: none;
+      }
+
+      a {
+        color: $input-color;
+        pointer-events: none;
+      }
+    }
+
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 0;
+      color: $input-color;
+    }
+  }
+
+  &__link {
+    color: $menu-text;
+    text-transform: capitalize;
+    max-width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+
+  &--news-single {
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.media {
+  &__socials {
+    display: flex;
+    align-items: center;
+  }
+
+  &__socials-item {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    &:hover {
+      .media__svg {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__svg {
+    fill: $light-text;
+    transition: fill 0.5s;
+  }
+}

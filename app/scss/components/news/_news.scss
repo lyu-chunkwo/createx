@@ -1,0 +1,222 @@
+.news {
+  padding: 120px 0 180px;
+
+  @media (max-width: 1200px) {
+    padding: 80px 0 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0 40px;
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 992px) {
+      margin-bottom: 15px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__buttons-item {
+    margin-right: 10px;
+
+    @media (max-width: 1260px) {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__btn {
+    width: 195px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: 700;
+    line-height: 1.62;
+    padding: 10px 0;
+    border-radius: 4px;
+    color: $input-color;
+    transition: border-color 0.5s, color 0.5s;
+
+    &:hover {
+      border-color: $accent;
+      color: $accent;
+    }
+
+    &.active {
+      border-color: $accent;
+      color: $accent;
+    }
+
+    @media (max-width: 1260px) {
+      width: 130px;
+    }
+
+    @media (max-width: 992px) {
+      padding: 5px;
+      border: 1px solid $input-border;
+      margin-bottom: 15px;
+
+      &.active {
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    max-width: 600px;
+    margin: 0 15px 60px;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+
+    @media (max-width: 768px) {
+      margin: 0 15px 30px;
+    }
+  }
+
+  &__img {
+    width: 600px;
+    height: 306px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__text-box {
+    padding: 24px;
+    background-color: #fff;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $title;
+    margin-bottom: 12px;
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+
+  &__meta {
+    margin-bottom: 16px;
+  }
+
+  &__meta-link {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $light-text;
+    padding-right: 12px;
+    margin-right: 12px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 12px;
+      background-color: $light-text;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      padding-left: 24px;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 15px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../images/ico/chat-gray.svg);
+      }
+    }
+
+    @media (max-width: 480px) {
+      display: block;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    color: $menu-text;
+    @include line-clamp(2);
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__pagination-list {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  &__pagination-item {
+    margin-right: 20px;
+
+    &.active {
+      .news__pagination-link {
+        color: $accent;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__pagination-link {
+    color: $title;
+    font-weight: 700;
+  }
+}

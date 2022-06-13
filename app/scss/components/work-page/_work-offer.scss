@@ -1,0 +1,126 @@
+.work-offer {
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -10px 120px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__button {
+    width: 230px;
+    margin: 0 10px;
+    padding: 32px 10px;
+    background-color: #fff;
+    border: none;
+    color: $input-color;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s, border-color 0.5s;
+
+    &.active {
+      background-color: $accent;
+      color: #fff;
+      box-shadow: 0px 60px 80px -20px rgba(255, 90, 48, 0.16), 0px 26px 24px -10px rgba(255, 90, 48, 0.1),
+        0px 12px 10px -6px rgba(255, 90, 48, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+
+      .work-offer__svg {
+        fill: #fff;
+      }
+    }
+
+    @media (max-width: 1260px) {
+      width: 170px;
+      padding: 15px 5px;
+    }
+
+    @media (max-width: 992px) {
+      border: 1px solid $input-border;
+      padding: 10px 5px;
+      margin-bottom: 20px;
+
+      &.active {
+        border: 1px solid $accent;
+      }
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__svg {
+    margin-bottom: 16px;
+    fill: $accent;
+    transition: fill 0.5s;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__load {
+    padding: 30px 0;
+    background-color: transparent;
+    border: none;
+    width: 125px;
+    margin: 0 auto;
+    display: block;
+
+    &:hover {
+      .work-offer__load-svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__load-svg {
+    margin-right: 16px;
+    transition: transform 0.5s;
+  }
+}
+
+.projects {
+  &--work {
+    @media (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__work-offer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+  }
+
+  &__offer-item {
+    max-width: 390px;
+    width: 100%;
+    margin: 0 15px 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name-work {
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,232 @@
+.vacancy {
+  padding: 120px 0 160px;
+
+  @media (max-width: 1200px) {
+    padding: 80px 0 120px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0 80px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 40px 0 40px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    max-width: 705px;
+    width: 100%;
+    margin-right: 20px;
+
+    @media (max-width: 992px) {
+      max-width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 40px;
+    border: 1px solid #e5e8ed;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    transition: box-shadow 0.5s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+        0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 40px;
+    }
+  }
+
+  &__box {
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $light-text;
+
+    span {
+      padding-left: 24px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
+  }
+
+  &__location {
+    padding-right: 13px;
+    margin-right: 12px;
+    position: relative;
+
+    &::before {
+      background-image: url(../images/ico/outline.svg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 12px;
+      background-color: $light-text;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__time {
+    &::before {
+      background-image: url(../images/ico/clock.svg);
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $title;
+  }
+
+  &__btn-box {
+  }
+
+  &__btn {
+    color: $accent;
+    font-weight: 700;
+    background-color: #fff;
+    border: 1px solid $accent;
+    transition: background-color 0.5s;
+
+    &--fill {
+      background-color: $accent;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: $accent;
+      }
+    }
+  }
+
+  &__subscribe-box {
+    max-width: 390px;
+
+    @media (max-width: 992px) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__subscribe-title {
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $title;
+    margin-bottom: 24px;
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__subscribe-text {
+    font-size: 18px;
+    color: $menu-text;
+    margin-bottom: 48px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn-box {
+    .vacancy__btn-subscribe {
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn-subscribe {
+    margin-right: 30px;
+    width: 170px;
+    border: 1px solid $accent;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 3.25;
+    border-radius: 4px;
+    transition: background-color 0.5s, color 0.5s;
+
+    @media (max-width: 480px) {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+    }
+
+    &--stroke {
+      background-color: #fff;
+      color: $accent;
+
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
+    }
+
+    &--fill {
+      background-color: $accent;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: $accent;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

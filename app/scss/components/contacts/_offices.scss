@@ -1,0 +1,149 @@
+.offices {
+  padding: 80px 0 120px;
+  background-color: $bg;
+
+  @media (max-width: 1200px) {
+    padding: 60px 0 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0 40px;
+  }
+
+  &__socials-box {
+    max-width: 270px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__social-title {
+    margin-bottom: 40px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.media {
+  &__socials-item {
+    &--offices {
+      margin-right: 24px;
+    }
+  }
+}
+
+.benefits {
+  &--offices {
+    padding-top: 0;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 40px;
+      padding-bottom: 60px;
+    }
+
+    @media (max-width: 768px) {
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top {
+    &--offices {
+      text-align: left;
+    }
+  }
+
+  &__item {
+    &--offices {
+      @media (max-width: 992px) {
+      }
+    }
+  }
+
+  &__title {
+    &--offices {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    &--offices {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item-officetitle {
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $title;
+    margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+  }
+
+  &__item-wrap {
+    width: 250px;
+
+    @media (max-width: 992px) {
+      &--offices {
+        width: 100%;
+      }
+    }
+  }
+
+  &__address {
+    color: $title;
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+    margin-bottom: 20px;
+    transition: border-color 0.5s;
+
+    &:hover {
+      color: $accent;
+      border-color: transparent;
+    }
+  }
+
+  &__link-box {
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__contact-item {
+    margin-bottom: 4px;
+
+    span {
+      color: $light-text;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      display: flex;
+
+      span {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__contact-link {
+    color: $title;
+  }
+}

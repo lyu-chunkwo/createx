@@ -1,0 +1,115 @@
+.details {
+  background-image: url(../images/details/details-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 80px 0;
+
+  @media (max-width: 576px) {
+    padding: 60px 0;
+  }
+
+  &__form {
+    max-width: 495px;
+    background-color: #fff;
+    padding: 48px 40px;
+    margin-left: auto;
+    border-radius: 4px;
+    box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+      0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+
+    @media (max-width: 1200px) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: 480px) {
+      padding: 30px 15px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.5;
+    color: $title;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    color: $menu-text;
+
+    span {
+      margin-bottom: 8px;
+      display: block;
+    }
+  }
+
+  &__label-check {
+    margin-bottom: 24px;
+    display: flex;
+  }
+
+  &__input,
+  &__textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    @include input;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  &__textarea {
+    height: 66px;
+    resize: none;
+  }
+
+  &__check-style {
+    width: 16px;
+    height: 16px;
+    background-color: $accent;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    top: 3px;
+  }
+
+  &__input-check {
+    @extend %checkbox-hidden;
+
+    &:checked + .details__check-style {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 8px;
+        top: 3px;
+        left: 3px;
+        background-image: url(../images/ico/check.svg);
+        z-index: 55;
+      }
+    }
+  }
+
+  &__check-text {
+    padding-left: 12px;
+    font-size: 14px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: block;
+    transition: color 0.5s, background-color 0.5s;
+
+    &:hover {
+      color: $accent;
+      border: 1px solid $accent;
+    }
+  }
+}

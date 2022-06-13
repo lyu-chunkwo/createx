@@ -1,0 +1,340 @@
+.news-single {
+  padding-bottom: 180px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 90px;
+  }
+
+  @media (max-width: 576px) {
+    padding-bottom: 40px;
+  }
+
+  &__inner {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__img {
+    margin-bottom: 80px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 80px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $title;
+    margin-bottom: 24px;
+    @include line-clamp(3);
+
+    @media (max-width: 480px) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 24px;
+
+      @media (max-width: 480px) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__quote {
+    padding: 24px 0 24px 58px;
+    position: relative;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $title;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 20px;
+      left: 0;
+      top: 5px;
+      background-image: url(../images/ico/braces.svg);
+    }
+
+    @media (max-width: 576px) {
+      font-size: 18px;
+      padding: 5px 0 5px 40px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 24px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__item {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 4px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../images/ico/checked-16.svg);
+    }
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 12px;
+      font-weight: 700;
+      color: $title;
+      display: block;
+      padding-top: 3px;
+    }
+  }
+
+  &__comments {
+    margin-bottom: 120px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__comments-title {
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__comments-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 838px) {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $input-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__comments-data {
+    width: 150px;
+    margin-right: 20px;
+
+    span {
+      display: block;
+      font-size: 14px;
+      color: $light-text;
+
+      &:first-child {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 700;
+        color: $title;
+      }
+    }
+
+    @media (max-width: 838px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__comments-text {
+    max-width: 630px;
+
+    p {
+      margin-bottom: 16px;
+      color: $menu-text;
+    }
+
+    span {
+      color: $accent;
+      font-weight: 700;
+    }
+
+    @media (max-width: 838px) {
+      max-width: 100%;
+    }
+  }
+
+  &__reply-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: $light-text;
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../images/ico/replay.svg);
+    }
+  }
+
+  &__form-title {
+    text-align: center;
+    margin-bottom: 48px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+
+    span {
+      color: $menu-text;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 576px) {
+      display: block;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    @include input;
+  }
+
+  &__label {
+    max-width: 390px;
+    width: 100%;
+    margin-right: 10px;
+    display: block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      display: block;
+    }
+
+    @media (max-width: 576px) {
+      max-width: 100%;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__label-textarea {
+    display: block;
+    margin-bottom: 40px;
+
+    span {
+      color: $menu-text;
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+  }
+
+  &__btn {
+    display: block;
+    width: 215px;
+    margin: 0 auto;
+    transition: color 0.5s, background-color 0.5s;
+
+    &:hover {
+      background-color: transparent;
+      color: $accent;
+      border-color: $accent;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<div class="popup" id="popup">
+  <a class="popup__area" href="#header"></a>
+  <div class="popup__body">
+    <div class="popup__content">
+      <a class="popup__close" href="#header">
+        <svg class="popup__close-svg" width="16" height="16">
+          <use xlink:href="images/svg-sprite/sprite.svg#cross"></use>
+        </svg>
+      </a>
+      <h3 class="popup__title">Subscribe to our newsletter</h3>
+      <form class="popup__subscribe">
+        <div class="popup__inputs">
+          <label class="popup__label">
+            <span>Name*</span>
+            <input class="popup__input" type="text" placeholder="Your name">
+          </label>
+          <label class="popup__label">
+            <span>Email*</span>
+            <input class="popup__input" type="email" placeholder="Your working email">
+          </label>
+        </div>
+        <button class="popup__button button button--fill">send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup" id="popup2">
+  <a class="popup__area" href="#header"></a>
+  <div class="popup__body">
+    <div class="popup__content">
+      <a class="popup__close" href="#header">
+        <svg class="popup__close-svg" width="16" height="16">
+          <use xlink:href="images/svg-sprite/sprite.svg#cross"></use>
+        </svg>
+      </a>
+      <h3 class="popup__title">Send your CV</h3>
+      <form class="popup__subscribe">
+        <div class="popup__inputs popup__inputs--cv">
+          <label class="popup__label">
+            <span>Name*</span>
+            <input class="popup__input" type="text" placeholder="Your name">
+          </label>
+          <label class="popup__label">
+            <span>Location*</span>
+            <select class="popup__select" name="location">
+              <option disabled">Choose your location</option>
+              <option value="russia">Russia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </label>
+          <label class="popup__label">
+            <span>Phone*</span>
+            <input class="popup__input" type="tel" placeholder="Your phone number">
+          </label>
+          <label class="popup__label">
+            <span>Email*</span>
+            <input class="popup__input" type="email" placeholder="Your working email">
+          </label>
+          <label class="popup__label">
+            <span>Сovering letter</span>
+            <textarea placeholder="Your covering letter"></textarea>
+          </label>
+          <label class="popup__label popup__label--file">
+            <span>Attach your CV*</span>
+            <input class="popup__input-file" type="file">
+          </label>
+        </div>
+        <button class="popup__button button button--fill">send</button>
+      </form>
+    </div>
+  </div>
+</div>
