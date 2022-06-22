@@ -1,4 +1,4 @@
-# [Honey Artel](https://lyu-chunkwo.github.io/createx/dist/index.html) - Сайт Медовой артели.
+# [Createx](https://lyu-chunkwo.github.io/createx/dist/index.html) - Разработка дизайнов из дерева.
 
 [<img src="https://lyu-chunkwo.github.io/createx/dist/images/foreadme/createx1.jpg" alt="img">](https://lyu-chunkwo.github.io/createx/dist/index.html)
 
