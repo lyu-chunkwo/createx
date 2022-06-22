@@ -1,4 +1,4 @@
-# [Createx](https://lyu-chunkwo.github.io/createx/dist/index.html) - Разработка дизайнов из дерева.
+# [Createx](https://lyu-chunkwo.github.io/createx/dist/index.html) - Разработка проектов.
 
 [<img src="https://lyu-chunkwo.github.io/createx/dist/images/foreadme/createx1.jpg" alt="img">](https://lyu-chunkwo.github.io/createx/dist/index.html)
 
